@@ -1,1 +1,1 @@
-A portfolio of my python learning progress.
+A portfolio of my data analysis and python learning progress.
