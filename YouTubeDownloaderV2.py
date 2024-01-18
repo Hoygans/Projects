@@ -1,9 +1,12 @@
+"""Goals for V3: Add threading to stop app freezing between progress updates. Improve error handling.
+Remove global file_browser. Remove redunant file_check. Addvuser choice of file type and quality. 
+Add new color scheme, or add user definable color schemes."""
 import customtkinter
 from pytube import YouTube
 import webbrowser
 
 
-# If Checkbox is checked, show download location label, redundant
+# If Checkbox is checked, show download location label, *redundant*
 def check():
     if file_check.get() == 1:
         label2.configure(text=f"Download location: {file_browser}")
@@ -21,8 +24,6 @@ def file_location():
 
 """ Gets URL from entry1, resets progress bar, updates label1, and attempts to download the highest quality mp4 
 regardless of age restriction. If failed, updates label1 to Download Error. """
-
-
 def start_download():
     try:
         video = entry.get()
